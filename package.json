@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Debrief-BC/debrief.js#readme",
   "dependencies": {
     "bignumber.js": "^9.0.0",
+    "ethereumjs-tx": "^2.1.2",
     "ethereumjs-wallet": "^0.6.3",
     "mkdirp": "^1.0.3",
     "web3": "^1.2.6"

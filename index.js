@@ -1,5 +1,6 @@
 const Web3 = require("web3");
 const Account = require("./pageages/account")
+const Transaction = require("./pageages/transaction")
 
 
 function configWeb3(options) {
@@ -25,6 +26,7 @@ class Debrief {
     constructor(options) {
         this.web3 = configWeb3(options.web3);
         this.account = new Account(Object.assign({}, options.account, { web3: this.web3 }));
+        this.tx = new Transaction(Object.assign({}, options.transaction, { web3: this.web3 }))
     }
 }
 
