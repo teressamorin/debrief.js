@@ -1,0 +1,23 @@
+{
+  "name": "debrief.js",
+  "version": "0.0.1",
+  "description": "a javascript library for d",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debrief-BC/debrief.js.git"
+  },
+  "author": "Debrief-BC",
+  "license": "Apache-2.0 ",
+  "bugs": {
+    "url": "https://github.com/Debrief-BC/debrief.js/issues"
+  },
+  "homepage": "https://github.com/Debrief-BC/debrief.js#readme",
+  "dependencies": {
+    "ethereumjs-wallet": "^0.6.3",
+    "mkdirp": "^1.0.3"
+  }
+}
