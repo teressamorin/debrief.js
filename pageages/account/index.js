@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const ethwallet = require("ethereumjs-wallet");
+const BigNumber = require("bignumber.js");
 
 function configStore(options) {
     if (options.type == "instance") {
@@ -17,6 +18,7 @@ function configStore(options) {
 class Account {
     constructor(options) {
         this.store = configStore(options.store);
+        this.web3 = options.web3;
     }
 
     setStore(options) {
@@ -54,6 +56,15 @@ class Account {
                 pubKey: wallet.getPublicKey(),
                 pubKeyStr: wallet.getPublicKeyString()
             }
+        })
+    }
+
+    balanceOf(address) {
+        return this.web3.eth.getBalance(address).then(balance => {
+            return {
+                amount: this.web3.utils.fromWei(balance),
+                original: new BigNumber(this.web3.utils.toHex(balance))
+            };
         })
     }
 }
